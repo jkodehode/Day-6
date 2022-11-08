@@ -1,128 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Tables</title>
-      <link rel="stylesheet" href="index.css" />
-   </head>
-   <body>
-      <main>
-         <!--  We start by wrapping table elements inside the table element -->
-         <table>
-            <!--  All tables can have a caption element, but it must always be right after the table tag, and it gives your table a caption.. -->
-            <caption>
-               Tables
-            </caption>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables - oppgave m frist 14 Novemeber</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <table>
+        <caption>
+          TIME TABELL
+        </caption>
+        <thead>
+          <tr>
+            <th
+              style="
+                vertical-align: bottom;
+                padding-bottom: 3px;
+                font-weight: 300;
+                font-style: italic;
+              "
+            >
+              Day/Period
+            </th>
+            <th>
+              I <br />
+              9:30-10:20
+            </th>
+            <th>
+              I <br />
+              10:20-11:10
+            </th>
+            <th>
+              I <br />
+              11:10-12:00
+            </th>
+            <th>12:00-12:40</th>
+            <th>
+              I <br />
+              12:40-1:30
+            </th>
+            <th>
+              I <br />
+              1:30-2:20
+            </th>
+            <th>
+              I <br />
+              2:20-3:10
+            </th>
+            <th>
+              I <br />
+              3:10-4:00
+            </th>
+          </tr>
+        </thead>
 
-            <!--  We can wrap the different parts of the table in different element, thead for the "header" of the table" -->
-            <thead>
-               <tr>
-                  <th
-                     colspan="10"
-                     style="
-                        background-color: rgb(109, 109, 109);
-                        color: #000;
-                        font-size: 32px;
-                     "
-                  >
-                     Premier league 2023/2024
-                  </th>
-               </tr>
-               <!--  We use <tr> to set the rows of the table -->
-               <tr class="table-headers">
-                  <!--  We use <th> to specify the different headers in the table, where each one gets it's own column -->
+        <tbody>
+          <tr>
+            <td class="day">Monday</td>
+            <td>Eng</td>
+            <td>Mat</td>
+            <td>Che</td>
+            <td rowspan="6" class="lunchText">L<br />U<br />N<br />C<br />H</td>
+            <td colspan="3">LAB</td>
+            <td>Phy</td>
+          </tr>
 
-                  <th style="width: 80px; height: 60px">Position</th>
-                  <!--  By giving a table element the colspan or rowspan attribute we can make it span over several columns or rows -->
-                  <th colspan="2">Team</th>
-                  <th>Won</th>
-                  <th>Draw</th>
-                  <th>Lost</th>
-                  <th>+/-</th>
-                  <th>GD</th>
-                  <th>Points</th>
-               </tr>
-            </thead>
+          <tr>
+            <td class="day">Tuesday</td>
+            <td colspan="3">LAB</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td>Mat</td>
+            <td>Sports</td>
+          </tr>
 
-            <tbody>
-               <!--  The colgroup element specifies one or more columns in a table for formatting, 
-                     and can be used to style entire column instead of repeating the styles for each row-->
-               <!-- 
-                  <colgroup>
-                  <col span="2" style="background-color: #fff" />
-                  <col style="background-color: #000" />
-                  <col style="background-color: yellow" span="3" />
-               </colgroup> -->
-               <tr class="table-data">
-                  <!-- the <td> element represents the data in the table, and will each get its own column -->
-                  <td class="qualify">1</td>
-                  <td colspan="2" class="team">Man Utd</td>
-                  <td>38</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>145 - 12</td>
-                  <td>133</td>
-                  <td>
-                     114
-                     <hr />
-                  </td>
-               </tr>
+          <tr>
+            <td class="day">Wednesday</td>
+            <td>Mat</td>
+            <td>Phy</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td colspan="3">LIBARY</td>
+          </tr>
 
-               <tr class="table-data">
-                  <td class="qualify">2</td>
-                  <td colspan="2" class="team">Leicester</td>
-                  <td>31</td>
-                  <td>2</td>
-                  <td>5</td>
-                  <td>78 - 32</td>
-                  <td>46</td>
-                  <td>95</td>
-               </tr>
-               <tr class="table-data">
-                  <td>3</td>
-                  <td colspan="2" class="team">Southampton</td>
-                  <td>27</td>
-                  <td>3</td>
-                  <td>8</td>
-                  <td>50 - 10</td>
-                  <td>40</td>
-                  <td>84</td>
-               </tr>
-               <tr class="table-data">
-                  <td>4</td>
-                  <td colspan="2" class="team">West Ham</td>
-                  <td>20</td>
-                  <td>7</td>
-                  <td>11</td>
-                  <td>80 - 36</td>
-                  <td>44</td>
-                  <td>67</td>
-               </tr>
-               <tr class="table-data">
-                  <td class="relegate">5</td>
-                  <td colspan="2" class="team">Brighton</td>
-                  <td>11</td>
-                  <td>9</td>
-                  <td>18</td>
-                  <td>45 - 29</td>
-                  <td>16</td>
-                  <td>42</td>
-               </tr>
+          <tr>
+            <td class="day">Thursday</td>
+            <td>Phy</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td colspan="3">LAB</td>
+            <td>Mat</td>
+          </tr>
 
-               <tr class="table-data">
-                  <td class="relegate">6</td>
-                  <td colspan="2" class="team">Liverpool</td>
-                  <td>4</td>
-                  <td>8</td>
-                  <td>26</td>
-                  <td>32 - 93</td>
-                  <td>-61</td>
-                  <td>20</td>
-               </tr>
-            </tbody>
-         </table>
-      </main>
-   </body>
+          <tr>
+            <td class="day">Friday</td>
+            <td colspan="3">LAB</td>
+            <td>Mat</td>
+            <td>Che</td>
+            <td>Eng</td>
+            <td>Phy</td>
+          </tr>
+
+          <tr>
+            <td class="day">Saturday</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td>Mat</td>
+            <td colspan="3">SEMINAR</td>
+            <td>SPORTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
 </html>
